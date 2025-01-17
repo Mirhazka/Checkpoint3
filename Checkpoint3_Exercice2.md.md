@@ -171,7 +171,8 @@ Nous allons le formater pour pouvoir après réparer le RAID. Il faut faire la c
 ![5](https://github.com/Mirhazka/Checkpoint3/blob/main/Ressources/Exercice%202/5-sdb1.png)
 
 Maintenant nous allons l'ajouter au RAID avec la commande  `mdadm --manage /dev/md0 --add /dev/sdb1`, ce qui donne :  
-![6](https://github.com/Mirhazka/Checkpoint3/blob/main/Ressources/Exercice%202/6-RepairRAID.png)
+![6](https://github.com/Mirhazka/Checkpoint3/blob/main/Ressources/Exercice%202/6-RepairRAID.png)  
+![6.1](https://github.com/Mirhazka/Checkpoint3/blob/main/Ressources/Exercice%202/6.1-RepairRAID.png)  
 
 **Q.2.3.4** Ajouter un nouveau volume logique LVM de 2 Gio qui servira à héberger des sauvegardes. Ce volume doit être monté automatiquement à chaque démarrage dans l'emplacement par défaut : `/var/lib/bareos/storage`.  
 Dans un premier temps, il faut créer ce nouveau volume logique avec la commande `lvcreate -L 2G -n backup cp3-vg`.  
